@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package org.apache.dubbo.springboot.demo.idl;
+
+//使用Java的文件输入流读取图片文件，将其内容存储到字节数组中。
+//将字节数组切片，并转换成字符串数组，每个字符串存储一部分内容。
+//使用Dubbo调用provider的服务，将切片后的字符串数组传递给provider。
+
+message FileSlice {
+  string content = 1;
+}
+
+service FileTransferService {
+  rpc transfer(FileSlice) returns (FileSlice);
+}

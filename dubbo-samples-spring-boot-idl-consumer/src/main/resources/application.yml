@@ -1,0 +1,13 @@
+dubbo:
+    application:
+        name: dubbo-springboot-demo-consumer
+        qos-enable: true
+        qos-port: 22223 # 本地QOS端口
+        qos-accept-foreign-ip: false  # 不接受外部IP连接
+        qos-accept-foreign-ip-whitelist: 124.221.171.162  # 允许的特定IP地址
+        enable-file-cache: false # 禁用文件缓存
+        logger: slf4j
+    protocol:
+        name: tri
+    registry:
+        address: zookeeper://124.221.171.162:2181

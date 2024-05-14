@@ -1,0 +1,3 @@
+# Project exclude paths
+/dubbo-samples-spring-boot-idl-consumer/target/
+/dubbo-samples-spring-boot-idl-provider/target/

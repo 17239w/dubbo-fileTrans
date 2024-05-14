@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package org.apache.dubbo.springboot.demo.idl;
+
+//接收到consumer传递过来的字节数组。
+//将合并后的字节保存到save.txt中，在E:\javaPros\filetrans2\dubbo-samples-spring-boot-idl\save目录下
+message FileSlice {
+  repeated bytes content = 1;
+}
+
+service FileTransferService {
+  rpc transfer(FileSlice) returns (FileSlice);
+}
